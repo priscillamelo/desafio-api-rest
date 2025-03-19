@@ -13,11 +13,9 @@ public class User {
     @Column(name = "name_user")
     private String name;
 
-    @Column(name = "account_user")
     @OneToOne(cascade = CascadeType.ALL)
     private Account account;
 
-    @Column(name = "card_user")
     @OneToOne(cascade = CascadeType.ALL)
     private Card card;
 

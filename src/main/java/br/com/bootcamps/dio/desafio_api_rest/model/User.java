@@ -10,6 +10,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_user")
     private Long id;
+
     @Column(name = "name_user")
     private String name;
 
@@ -19,9 +20,9 @@ public class User {
     @OneToOne(cascade = CascadeType.ALL)
     private Card card;
 
-    @Column(name = "feature_user")
+    @Column(name = "features_user")
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Feature> feature;
+    private List<Features> features;
 
     @Column(name = "news_user")
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
@@ -51,12 +52,12 @@ public class User {
         this.account = account;
     }
 
-    public List<Feature> getFeature() {
-        return feature;
+    public List<Features> getFeatures() {
+        return features;
     }
 
-    public void setFeature(List<Feature> feature) {
-        this.feature = feature;
+    public void setFeatures(List<Features> features) {
+        this.features = features;
     }
 
     public Card getCard() {

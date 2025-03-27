@@ -1,14 +1,24 @@
 spring:
   datasource:
-#    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
-#    username: ${PGUSER}
-#    password: ${PGPASSWORD}
-    url: jdbc:postgresql://localhost:5432/api_decola_tech
-    username: postgres
-    password: postgres
+    url: ${DATABASE_URL}
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
     driver-class-name: org.postgresql.Driver
   jpa:
     open-in-view: false
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/api_decola_tech
+#    username: postgres
+#    password: postgres
+#    driver-class-name: org.postgresql.Driver
+#  jpa:
+#    open-in-view: false
+#    hibernate:
+#      ddl-auto: create
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect

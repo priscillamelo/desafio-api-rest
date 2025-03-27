@@ -1,8 +1,12 @@
 spring:
   datasource:
-    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
-    username: ${PGUSER}
-    password: ${PGPASSWORD}
+#    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+#    username: ${PGUSER}
+#    password: ${PGPASSWORD}
+    url: jdbc:postgresql://localhost:5432/api_decola_tech
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
   jpa:
     open-in-view: false
     hibernate:
